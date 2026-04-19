@@ -12,8 +12,11 @@ This repository contains tasks completed as part of my internship.
 - Task 3: MERGING VIDEO WITH AUDIO
 
 ### Week 2
-- Task 1,2,3: OBJECT DETECTION 
+- Task 1,2,3: OBJECT DETECTION
 
+### WEEK 3
+- Task 1: SEGMENTATION
+- Task 2: STACK VIDEOS USING FFMPEG
 ##  Tools Used
 - Python
 - FFmpeg
