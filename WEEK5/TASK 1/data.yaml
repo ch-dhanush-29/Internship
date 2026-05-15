@@ -1,0 +1,9 @@
+path: C:\INTERNSHIP\yolo_dataset
+
+train: C:\INTERNSHIP\yolo_dataset\images\train
+val: C:\INTERNSHIP\yolo_dataset\images\val
+
+names:
+  0: person
+  1: car
+  2: bike
