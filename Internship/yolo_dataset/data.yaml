@@ -1,0 +1,9 @@
+path: C:\Users\Dhanush\OneDrive\Documents\Internship\yolo_dataset
+
+train: C:\Users\Dhanush\OneDrive\Documents\Internship\yolo_dataset\train\images
+val: C:\Users\Dhanush\OneDrive\Documents\Internship\yolo_dataset\val
+
+names:
+  0: person
+  1: car
+  2: bike
