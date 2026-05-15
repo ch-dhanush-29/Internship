@@ -19,7 +19,7 @@ This repository contains tasks completed as part of my internship.
 - Task 2: STACK VIDEOS USING FFMPEG
 
 ### WEEK 4
--Task 1: ANALYSE THE META FILES AND REPORT IT
+-Task 1: ANALYSE THE META FILES AND REPORT IT.
 -Task 2: CREATE LABELS USING LABEL-STUDIO
 
 ### WEEK 5
