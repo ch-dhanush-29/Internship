@@ -1,12 +1,12 @@
 task: detect
 mode: train
-model: yolov8n.pt
-data: C:\INTERNSHIP\yolo_dataset\data.yaml
+model: yolo11s.pt
+data: C:\Users\Dhanush\OneDrive\Documents\Internship\resized_datset\data.yaml
 epochs: 100
 time: null
 patience: 100
 batch: 16
-imgsz: 384
+imgsz: 640
 save: true
 save_period: -1
 cache: false
@@ -107,4 +107,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\Dhanush\OneDrive\Documents\Internship\runs\detect\train-2
+save_dir: C:\Users\Dhanush\OneDrive\Documents\Internship\ultralytics\runs\detect\train-2
