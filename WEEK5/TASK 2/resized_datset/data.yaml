@@ -1,9 +1,9 @@
-path: C:\INTERNSHIP\yolo_dataset
+path: C:\Users\Dhanush\OneDrive\Documents\Internship\yolo_dataset
 
-train: C:\INTERNSHIP\yolo_dataset\images\train
-val: C:\INTERNSHIP\yolo_dataset\images\val
+train: C:\Users\Dhanush\OneDrive\Documents\Internship\resized_datset\train
+val: C:\Users\Dhanush\OneDrive\Documents\Internship\resized_datset\val
 
 names:
-  0: person
-  1: car
-  2: bike
+  0: car
+  1: cycle
+  2: person
