@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #070a13;
+  --color-cyber-dark: #0e1424;
+  --color-cyber-card: rgba(15, 22, 42, 0.7);
+  --color-cyber-border: rgba(51, 65, 85, 0.4);
+  
+  --color-cyber-cyan: #00f0ff;
+  --color-cyber-green: #0df041;
+  --color-cyber-magenta: #ff0055;
+  --color-cyber-orange: #ffb700;
+  --color-cyber-yellow: #ffe600;
+  --color-cyber-text: #e2e8f0;
+  --color-cyber-muted: #94a3b8;
+
+  --shadow-neon-cyan: 0 0 8px rgba(0, 240, 255, 0.4), 0 0 16px rgba(0, 240, 255, 0.1);
+  --shadow-neon-green: 0 0 8px rgba(13, 240, 65, 0.4), 0 0 16px rgba(13, 240, 65, 0.1);
+  --shadow-neon-magenta: 0 0 8px rgba(255, 0, 85, 0.4), 0 0 16px rgba(255, 0, 85, 0.1);
+  --shadow-neon-orange: 0 0 8px rgba(255, 183, 0, 0.4), 0 0 16px rgba(255, 183, 0, 0.1);
+
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-sans: "Inter", "Space Grotesk", sans-serif;
+}
+
+/* Global Base Styles */
+body {
+  background-color: var(--color-cyber-bg);
+  color: var(--color-cyber-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(11, 15, 25, 0.9) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, rgba(0, 240, 255, 0.05) 0, transparent 40%),
+    radial-gradient(at 50% 100%, rgba(255, 0, 85, 0.03) 0, transparent 50%),
+    linear-gradient(rgba(7, 10, 19, 0.6) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgba(7, 10, 19, 0.6) 0.5px, transparent 0.5px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+body::selection {
+  background-color: var(--color-cyber-cyan);
+  color: #000000;
+}
+
+/* Glassmorphism Panel Component Layouts */
+.glass-panel {
+  background-color: var(--color-cyber-card);
+  border: 1px solid var(--color-cyber-border);
+  border-radius: 0.75rem; /* 12px rounded-xl */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-glow-cyan {
+  background-color: var(--color-cyber-card);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-neon-cyan);
+}
+
+.glass-panel-glow-magenta {
+  background-color: var(--color-cyber-card);
+  border: 1px solid rgba(255, 0, 85, 0.3);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-neon-magenta);
+}
+
+.glass-panel-glow-green {
+  background-color: var(--color-cyber-card);
+  border: 1px solid rgba(13, 240, 65, 0.3);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-neon-green);
+}
+
+.glass-panel-glow-orange {
+  background-color: var(--color-cyber-card);
+  border: 1px solid rgba(255, 183, 0, 0.3);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-neon-orange);
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-cyber-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-cyber-border);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 240, 255, 0.5);
+}
+
+/* Grid scanning background animations */
+@keyframes cyber-scan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.cyber-grid-animate {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to bottom, rgba(51, 65, 85, 0.05) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(51, 65, 85, 0.05) 1px, transparent 1px);
+  animation: cyber-scan 30s linear infinite;
+}
+
+/* Neon Text Pulse */
+.text-glow-cyan {
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.6), 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.text-glow-magenta {
+  text-shadow: 0 0 5px rgba(255, 0, 85, 0.6), 0 0 10px rgba(255, 0, 85, 0.3);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 5px rgba(13, 240, 65, 0.6), 0 0 10px rgba(13, 240, 65, 0.3);
+}
+
+/* 3D Hologram Radar Styles */
+.hologram-viewport {
+  perspective: 800px;
+  perspective-origin: 50% 30%;
+  overflow: hidden;
+}
+
+.hologram-disk-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transform: rotateX(65deg) rotateZ(0deg);
+}
+
+.hologram-disk {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+.grid-primary {
+  animation: spin-clockwise 20s linear infinite;
+}
+
+.grid-secondary {
+  animation: spin-counter 15s linear infinite;
+}
+
+@keyframes spin-clockwise {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+@keyframes spin-counter {
+  0% { transform: rotateZ(360deg); }
+  100% { transform: rotateZ(0deg); }
+}
+
+.hologram-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.circle-1 { inset: 10%; border-color: rgba(0, 240, 255, 0.25); }
+.circle-2 { inset: 30%; border-color: rgba(0, 240, 255, 0.2); }
+.circle-3 { inset: 50%; border-color: rgba(0, 240, 255, 0.3); }
+
+.circle-dashed {
+  inset: 2%;
+  border: 1.5px dashed rgba(13, 240, 65, 0.35);
+  box-shadow: 0 0 8px rgba(13, 240, 65, 0.05);
+}
+
+.hologram-crossline {
+  position: absolute;
+  background-color: rgba(0, 240, 255, 0.15);
+}
+
+.cross-x {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.cross-y {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+
+/* 3D Scanning Line Animation */
+.hologram-scanner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.7), transparent);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  animation: scan-vertical 4s ease-in-out infinite;
+  transform: translateZ(10px);
+}
+
+@keyframes scan-vertical {
+  0%, 100% { transform: translateY(-110px) translateZ(0px); opacity: 0.2; }
+  50% { transform: translateY(110px) translateZ(30px); opacity: 1; }
+}
+
+/* Holographic Target Nodes */
+.hologram-target {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-cyber-magenta);
+  border-radius: 50%;
+  box-shadow: var(--shadow-neon-magenta);
+  transform: translateZ(35px) rotateX(-65deg); /* Counter-rotate X to face camera */
+}
+
+/* Position nodes at 3D space targets */
+.target-1 { top: 25%; left: 35%; transform: translateZ(25px) rotateX(-65deg); }
+.target-2 { top: 60%; left: 70%; transform: translateZ(45px) rotateX(-65deg); background-color: var(--color-cyber-green); box-shadow: var(--shadow-neon-green); }
+.target-3 { top: 40%; left: 20%; transform: translateZ(15px) rotateX(-65deg); background-color: var(--color-cyber-yellow); box-shadow: 0 0 8px #ffe600; }
+
+.target-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid inherit;
+  animation: target-ping 2s ease-in-out infinite;
+}
+
+@keyframes target-ping {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}

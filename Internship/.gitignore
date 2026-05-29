@@ -1,1 +1,50 @@
-ultralytics/venv 
+# Node.js / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/*.local
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/snapshots/*
+!backend/snapshots/.gitkeep
+venv/
+.venv/
+env/
+ENV/
+*.log
+
+# Database
+backend/traffic_vision.db
+traffic_vision.db
+
+# Large weights / binary files (recommended to store outside repository)
+*.pt
+*.onnx
+*.engine
+*.pb
+*.tflite
+
+# Large Datasets / Model Libraries
+yolo_dataset/
+resized_datset/
+ultralytics/
+anaconda_projects/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
